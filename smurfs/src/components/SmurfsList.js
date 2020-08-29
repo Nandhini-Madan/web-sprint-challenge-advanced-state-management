@@ -25,8 +25,9 @@ const NewsList = (props) => {
                     </div>
                 )
             }
-            <button onClick={props.getSmurfs}>GeJOKE</button>
-
+            <button onClick={props.getSmurfs}>GeSmurfs</button>
+           
+           
 
         </>
     )

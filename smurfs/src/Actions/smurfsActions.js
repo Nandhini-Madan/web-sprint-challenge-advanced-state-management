@@ -33,3 +33,20 @@ axios
 })
 
 };
+
+export const createSmurfs=(smurfsDetails)=>(dispatch)=>{
+    axios
+    .post("http://localhost:3333/smurfs",smurfsDetails)
+    .then((res)=>{
+        dispatch({
+            type:FETCHING_SMURFS_START,
+            payload:res
+        })
+    })
+    .catch((err)=>{
+        dispatch({
+            type:FETCHING_SMURFS_ERROR,
+            payload:res
+        })
+    })
+}
