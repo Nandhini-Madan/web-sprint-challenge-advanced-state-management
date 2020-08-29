@@ -1,36 +1,41 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import {getSmurfs} from "../actions/smurfsActions";
+import { getSmurfs } from "../Actions/smurfsActions";
 
 
 
 const NewsList = (props) => {
-//    useEffect(() => {
-//         getNews();
-//     }, [getNews]);
+    //    useEffect(() => {
+    //         getNews();
+    //     }, [getNews]);
 
-//     if (isFetching) {
-//         return (
-//             <h2>Loading</h2>
-//         )
-//     }
-    console.log("news",props);
+    //     if (isFetching) {
+    //         return (
+    //             <h2>Loading</h2>
+    //         )
+    //     }
+    console.log("news", props);
     return (
         <>
-            <h2>Today Joke:{props.news}</h2>
-            <p></p>
-           
-            <button onClick={props.getNews}>GeJOKE</button>
-            
-         
+            {
+                props.smurfs.map((item) =>
+                    <div key={item.id}>
+                        <p >{item.name}</p>
+                        <p>{item.age}</p>
+                    </div>
+                )
+            }
+            <button onClick={props.getSmurfs}>GeJOKE</button>
+
+
         </>
     )
 };
 
 const mapStateToProps = (state) => {
-    return { news: state.news, isFetching: state.isFetching }
+    return { smurfs: state.smurfs, isFetching: state.isFetching }
 };
 
-const mapDispatchToProps = { getNews };
+const mapDispatchToProps = { getSmurfs };
 
 export default connect(mapStateToProps, mapDispatchToProps)(NewsList);

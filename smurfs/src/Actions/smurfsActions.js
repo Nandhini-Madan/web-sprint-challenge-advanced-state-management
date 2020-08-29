@@ -26,7 +26,7 @@ axios
 })
 .catch((err)=>{
     dispatch({
-        type:FETCHING_NEWS_ERROR,
+        type:FETCHING_SMURFS_ERROR,
         payload: `${err.response.message} code: ${err.response.code}`
     });
     console.log("error",err);

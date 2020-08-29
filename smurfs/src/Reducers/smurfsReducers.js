@@ -1,6 +1,6 @@
 import {FETCHING_SMURFS_START,FETCHING_SMURFS_SUCCESS,FETCHING_SMURFS_ERROR} from "../actions/smurfsActions";
 const initialState={
-    smurfs:"",
+    smurfs:[{"name":"Initial Fetch","age":200,"height":"5cm","id":0}],
     isFetching:false,
     error:""
 }
