@@ -4,6 +4,11 @@ import "./index.css";
 import App from "./components/App";
 import {Provider} from "react-redux";
 
+//creating store 
 ReactDOM.render(
-<App />
+    
+    <Provider>
+    <App />
+    </Provider>
+
 , document.getElementById("root"));
