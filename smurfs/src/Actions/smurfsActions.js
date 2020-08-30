@@ -37,16 +37,16 @@ axios
 export const createSmurfs=(smurfsDetails)=>(dispatch)=>{
     axios
     .post("http://localhost:3333/smurfs",smurfsDetails)
-    .then((res)=>{
+    .then((result)=>{
         dispatch({
             type:FETCHING_SMURFS_START,
-            payload:res
+            payload:result
         })
     })
     .catch((err)=>{
         dispatch({
             type:FETCHING_SMURFS_ERROR,
-            payload:res
+            payload:err
         })
     })
 }

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {createSmurfs} from '../Actions/smurfActions';
+import {createSmurfs} from '../Actions/smurfsActions';
 import { connect } from 'react-redux';
 
 
