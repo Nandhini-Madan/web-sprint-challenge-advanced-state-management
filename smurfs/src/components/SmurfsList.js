@@ -16,20 +16,21 @@ const SmurfsList = (props) => {
     //     }
     console.log("Smurfs", props);
     return (
-        <>
+        <div className="Smurfs">
             {
                 props.smurfs.map((item) =>
-                    <div key={item.id}>
-                        <p >{item.name}</p>
-                        <p>{item.age}</p>
+                    <div className="Smurfs_List" key={item.id}>
+                        <p><span>NAME:</span>{item.name}</p>
+                        <p><span>AGE:</span>{item.age}</p>
+                        <p><span>HEIGHT:</span>{item.height}</p>
                     </div>
                 )
             }
             <button onClick={props.getSmurfs}>GeSmurfs</button>
-           
-           
 
-        </>
+
+
+        </div>
     )
 };
 
