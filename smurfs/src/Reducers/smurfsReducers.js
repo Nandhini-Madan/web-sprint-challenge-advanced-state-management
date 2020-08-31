@@ -5,7 +5,7 @@ const initialState={
     error:""
 }
 
-export const newsListReducer=(state=initialState,action)=>{
+export const smurfsReducers=(state=initialState,action)=>{
 switch(action.type){
     case FETCHING_SMURFS_START:
         console.log("Fetching New Start");
@@ -15,7 +15,7 @@ switch(action.type){
      case FETCHING_SMURFS_SUCCESS:
          console.log("Fetching News Success");
          return{
-             ...state, news:action.payload, isFetching:false
+             ...state, smurfs:action.payload, isFetching:false
          } 
     case FETCHING_SMURFS_ERROR:
         console.log("Fetching Errr");
@@ -23,6 +23,6 @@ switch(action.type){
             ...state,isFetching:false,error:action.payload
         } 
         default:
-            return state      
+            return state;  
 }
 };

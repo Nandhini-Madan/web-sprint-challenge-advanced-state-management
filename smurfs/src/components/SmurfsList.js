@@ -4,7 +4,7 @@ import { getSmurfs } from "../Actions/smurfsActions";
 
 
 
-const NewsList = (props) => {
+const SmurfsList = (props) => {
     //    useEffect(() => {
     //         getNews();
     //     }, [getNews]);
@@ -14,7 +14,7 @@ const NewsList = (props) => {
     //             <h2>Loading</h2>
     //         )
     //     }
-    console.log("news", props);
+    console.log("Smurfs", props);
     return (
         <>
             {
@@ -39,4 +39,4 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = { getSmurfs };
 
-export default connect(mapStateToProps, mapDispatchToProps)(NewsList);
+export default connect(mapStateToProps, mapDispatchToProps)(SmurfsList);

@@ -18,10 +18,10 @@ dispatch(
 axios
 .get("http://localhost:3333/smurfs", { headers: headers })
 .then((res)=>{
-    console.log("resukt",res);
+    console.log("resukt",res.data);
     dispatch({
         type:FETCHING_SMURFS_SUCCESS,
-        payload:res
+        payload:res.data
     });
 })
 .catch((err)=>{
